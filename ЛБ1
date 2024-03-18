@@ -1,0 +1,15 @@
+def count_vowels(string: str) -> int:
+    vowels = "aeiou"
+    count = 0
+    for letter in string:
+        if letter.lower() in vowels:
+            count += 1
+    return count
+
+
+# Tests
+assert count_vowels("Hello") == 2
+assert count_vowels("abracadabra") == 5
+assert count_vowels("AEIOU") == 5
+assert count_vowels("12345") == 0
+assert count_vowels("") == 0
